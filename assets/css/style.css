@@ -1,0 +1,13 @@
+body {
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5rem;
+
+}
+header {
+    background: grey;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px indianred solid;
+    margin-bottom: 10px;
+}
