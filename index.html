@@ -2,28 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Quiz-Game</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Quiz-Game</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>Welcome!</h1>
-    </header>
+  <header>
+    <nav>
+      <div class="score">Scoreboard</div>
 
-    <main>
+      <div class="timer">Time: <span id="time">30</span></div>
+    </nav>
+  </header>
 
-        <div class="container">
-            <h1 id="header1">header text</h1>
-     </div>
+  <div class="start-screen">
+    <p>Click the "Start Quiz" button to begin!</p>
+  </div>
 
-    </main>
+  <!-- start button -->
+  <div id="start-btn"><button>Start Quiz!</button> </div>
 
-    <script src="assets/script.js"> </script>
+  <!-- questions -->
+  <div id="questions">
+
+    <div id="title"></div>
+    <div id="choice-buttons"></div>
+  </div>
+
+
+  <script src="assets/script.js"> </script>
 
 </body>
 
