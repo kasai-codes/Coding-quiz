@@ -15,8 +15,8 @@ var currentIndex = 0;
 
 var currentQuestion;
 
-var choiceButton;
 
+// Hiding starting screeen on the click of the start quiz button, starting countdown, and displaying first question.
 startButton.addEventListener("click", function () {
     hideStartScreen.setAttribute("style", "display:none;")
 
@@ -26,7 +26,9 @@ startButton.addEventListener("click", function () {
 });
 
 // Variables to store functions to print question text and buttons to html.
-var buttonSelection= document.getElementById("choice-buttons");
+var newButton;
+
+var buttonSelection = document.getElementById("choice-buttons");
 
 var questionText = document.getElementById("questionContent");
 
@@ -53,17 +55,17 @@ function displayQuestion() {
         }
     }
 
-
     questionTitle.textContent = questions[currentIndex].text;
 
     for (var i = 0; i < questions[currentIndex].choice.length; i++) {
-        buttonSelection = document.createElement("button");
 
-        choiceButton.textContent = questions[currentIndex].choice[i];
-        choiceButtons.append(choiceButton);
+        newButton = document.createElement("button");
+
+        newButton.textContent = questions[currentIndex].choice[i];
+        buttonSelection.append(newButton);
     }
 
-    choiceButton.addEventListener("click", function (event) {
+    newButton.addEventListener("click", function (event) {
         if (event.target.textContent === questions[currentIndex].correct) {
             console.log("Correct!");
         }
@@ -76,16 +78,17 @@ function displayQuestion() {
 
     function displayNextQuestion() {
         questionTitle.innerHTML = "";
-        choiceButtons.innerHTML = "";
+        buttonSelection.innerHTML = "";
 
-        currentIndex += 1;
-        displayQuestion();
+       currentIndex ++;
+       if (currentIndex < questions.length) {
+           displayQuestion();
+       } 
+       else {
+           endQuiz();
+       }
     }
-
-
 }
-
-
 
 function endQuiz() {
     // Clear timer
