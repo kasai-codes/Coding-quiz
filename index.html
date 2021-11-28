@@ -13,28 +13,38 @@
 
   <header>
     <nav>
-      <div class="score">Scoreboard</div>
+      <div class="score">Score</div>
 
       <div class="timer">Time: <span id="time">30</span></div>
     </nav>
   </header>
 
-  <div class="start-screen">
-    <p>Click the "Start Quiz" button to begin!</p>
-  </div>
+  <main>
 
-  <!-- start button -->
-  <div id="start-btn"><button>Start Quiz!</button> </div>
+    <div class="starting-screen">
+      <p>Click the "Start Quiz" button to begin!</p>
 
-  <!-- questions -->
-  <div id="questions">
+      <!-- start button -->
+      <button id="start-btn">Start Quiz!</button>
+    </div>
 
-    <div id="title"></div>
-    <div id="choice-buttons"></div>
-  </div>
 
+
+    <!-- displaying questions -->
+    <div id="questionContent">
+
+      <div id="question-tile"></div>
+
+      <div id="choice-buttons"></div>
+      
+    </div>
+
+
+
+  </main>
 
   <script src="assets/script.js"> </script>
+  <script src="assets/questions.js"> </script>
 
 </body>
 
