@@ -63,8 +63,9 @@ function displayQuestion() {
 
         newButton.textContent = questions[currentIndex].choice[i];
         buttonSelection.append(newButton);
-    }
+        console.log(newButton)
 
+        
     newButton.addEventListener("click", function (event) {
         if (event.target.textContent === questions[currentIndex].correct) {
             console.log("Correct!");
@@ -72,9 +73,12 @@ function displayQuestion() {
         else {
             secondsLeft -= 5;
             console.log("Incorrect");
+            console.log(currentIndex);
         }
         displayNextQuestion();
     });
+
+    }
 
     function displayNextQuestion() {
         questionTitle.innerHTML = "";

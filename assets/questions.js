@@ -5,7 +5,7 @@ var questions = [
         text: "two plus two equals?",
         choice: [
             "one",
-            "two",
+            "ninety",
             "four"
         ],
         correct: "four"
@@ -16,7 +16,7 @@ var questions = [
         choice: [
             "one",
             "two",
-            "four"
+            "three"
         ],
         correct: "two"
     },
@@ -25,8 +25,8 @@ var questions = [
         text: "one times zero equals?",
         choice: [
             "one",
-            "two",
-            "four"
+            "seven",
+            "six"
         ],
         correct: "one"
     },
